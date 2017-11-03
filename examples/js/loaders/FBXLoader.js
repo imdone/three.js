@@ -519,7 +519,7 @@
 				case 'AmbientColor':
 				case 'ShininessExponent': // AKA glossiness map
 				case 'SpecularFactor': // AKA specularLevel
-				case 'VectorDisplacementColor': // NOTE: Seems to be a copy of DisplacementColor
+				case 'VectorDisplacementColor': // NOTE: Seems to be a copy of DisplacementColor id:49
 				default:
 					console.warn( 'THREE.FBXLoader: %s map is not supported in three.js, skipping texture.', type );
 					break;
@@ -1446,7 +1446,7 @@
 						deformer.bones[ subDeformer.index ] = model;
 
 						// seems like we need this not to make non-connected bone, maybe?
-						// TODO: confirm
+						// TODO: confirm id:10
 						if ( model2 !== null ) model.add( model2 );
 
 					}
@@ -1617,7 +1617,7 @@
 
 							}
 
-							// TODO: could this be calculated linearly from FarAttenuationStart to FarAttenuationEnd?
+							// TODO: could this be calculated linearly from FarAttenuationStart to FarAttenuationEnd? id:23
 							var decay = 1;
 
 							switch ( type ) {
@@ -1642,7 +1642,7 @@
 									var penumbra = 0;
 									if ( lightAttribute.OuterAngle !== undefined ) {
 
-										// TODO: this is not correct - FBX calculates outer and inner angle in degrees
+										// TODO: this is not correct - FBX calculates outer and inner angle in degrees id:37
 										// with OuterAngle > InnerAngle && OuterAngle <= Math.PI
 										// while three.js uses a penumbra between (0, 1) to attenuate the inner angle
 										penumbra = THREE.Math.degToRad( lightAttribute.OuterAngle.value );
@@ -3637,7 +3637,7 @@
 		// 1 << 32 will return 1 so using multiply operation instead here.
 		// There's a possibility that this method returns wrong value if the value
 		// is out of the range between Number.MAX_SAFE_INTEGER and Number.MIN_SAFE_INTEGER.
-		// TODO: safely handle 64-bit integer
+		// TODO: safely handle 64-bit integer id:68
 		getInt64: function () {
 
 			var low, high;

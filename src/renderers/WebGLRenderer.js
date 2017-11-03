@@ -874,7 +874,7 @@ function WebGLRenderer( parameters ) {
 
 					var attribute = attributes.get( geometryAttribute );
 
-					// TODO Attribute may not be available on context restore
+					// TODO Attribute may not be available on context restore id:144
 
 					if ( attribute === undefined ) continue;
 
@@ -1208,7 +1208,7 @@ function WebGLRenderer( parameters ) {
 	};
 
 	/*
-	// TODO Duplicated code (Frustum)
+	// TODO Duplicated code (Frustum) id:84
 
 	var _sphere = new Sphere();
 
@@ -1575,7 +1575,7 @@ function WebGLRenderer( parameters ) {
 			uniforms.spotShadowMatrix.value = lights.state.spotShadowMatrix;
 			uniforms.pointShadowMap.value = lights.state.pointShadowMap;
 			uniforms.pointShadowMatrix.value = lights.state.pointShadowMatrix;
-			// TODO (abelnation): add area lights shadow info to uniforms
+			// TODO (abelnation): add area lights shadow info to uniforms id:99
 
 		}
 
@@ -1882,7 +1882,7 @@ function WebGLRenderer( parameters ) {
 			}
 
 			// RectAreaLight Texture
-			// TODO (mrdoob): Find a nicer implementation
+			// TODO (mrdoob): Find a nicer implementation id:89
 
 			if ( m_uniforms.ltcMat !== undefined ) m_uniforms.ltcMat.value = UniformsLib.LTC_MAT_TEXTURE;
 			if ( m_uniforms.ltcMag !== undefined ) m_uniforms.ltcMag.value = UniformsLib.LTC_MAG_TEXTURE;
@@ -2386,7 +2386,7 @@ function WebGLRenderer( parameters ) {
 			}
 
 			// currently relying on the fact that WebGLRenderTargetCube.texture is a Texture and NOT a CubeTexture
-			// TODO: unify these code paths
+			// TODO: unify these code paths id:165
 			if ( ( texture && texture.isCubeTexture ) ||
 				( Array.isArray( texture.image ) && texture.image.length === 6 ) ) {
 

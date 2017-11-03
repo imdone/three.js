@@ -22,7 +22,7 @@ var PathPrototype = Object.assign( Object.create( CurvePath.prototype ), {
 
 	moveTo: function ( x, y ) {
 
-		this.currentPoint.set( x, y ); // TODO consider referencing vectors instead of copying?
+		this.currentPoint.set( x, y ); // TODO consider referencing vectors instead of copying? id:162
 
 	},
 

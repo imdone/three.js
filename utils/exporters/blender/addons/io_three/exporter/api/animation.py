@@ -462,7 +462,7 @@ def _rotation(bone, frame, action, armature_matrix):
 
     """
 
-    # TODO: calculate rotation also from rotation_euler channels
+    # TODO: calculate rotation also from rotation_euler channels id:213
 
     rotation = mathutils.Vector((0, 0, 0, 1))
 

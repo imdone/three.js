@@ -3383,7 +3383,7 @@
         var object, body;
 
         if (strict) {
-            // TODO(ikarienator): Should we update the test cases instead?
+            // TODO (ikarienator): Should we update the test cases instead? id:32
             skipComment();
             tolerateError(Messages.StrictModeWith);
         }

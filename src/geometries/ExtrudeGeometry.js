@@ -158,7 +158,7 @@ ExtrudeBufferGeometry.prototype.addShape = function ( shape, options ) {
 
 		// SETUP TNB variables
 
-		// TODO1 - have a .isClosed in spline?
+		// TODO 1 - have a .isClosed in spline? id:61
 
 		splineTube = options.frames !== undefined ? options.frames : extrudePath.computeFrenetFrames( steps, false );
 

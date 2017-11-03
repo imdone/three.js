@@ -249,7 +249,7 @@ Object.assign( Material.prototype, EventDispatcher.prototype, {
 		if ( this.visible === false ) data.visible = false;
 		if ( JSON.stringify( this.userData ) !== '{}' ) data.userData = this.userData;
 
-		// TODO: Copied from Object3D.toJSON
+		// TODO: Copied from Object3D.toJSON id:83
 
 		function extractFromCache( cache ) {
 

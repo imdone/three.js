@@ -162,7 +162,7 @@ var UniformsLib = {
 			groundColor: {}
 		} },
 
-		// TODO (abelnation): RectAreaLight BRDF data needs to be moved from example to main src
+		// TODO (abelnation): RectAreaLight BRDF data needs to be moved from example to main src id:145
 		rectAreaLights: { value: [], properties: {
 			color: {},
 			position: {},

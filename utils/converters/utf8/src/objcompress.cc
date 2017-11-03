@@ -109,7 +109,7 @@ int main(int argc, const char* argv[]) {
     const uint32 hash = SimpleHash(&utf8[0], utf8.size());
     char buf[9] = { '\0' };
     ToHex(hash, buf);
-    // TODO: this needs to handle paths.
+    // TODO: this needs to handle paths. id:222
     std::string out_fn = std::string(buf) + "." + argv[2];
     FILE* out_fp = fopen(out_fn.c_str(), "wb");
     printf("    \'%s\': [\n", out_fn.c_str());
@@ -132,7 +132,7 @@ int main(int argc, const char* argv[]) {
         const size_t group_length = group_lengths[group_index];
         const size_t next_start = group_start + group_length;
         const size_t webgl_index_length = webgl_meshes[i].indices.size();
-        // TODO: bbox info is better placed at the head of the file,
+        // TODO: bbox info is better placed at the head of the file, id:183
         // perhaps transposed. Also, when a group gets split between
         // batches, the bbox gets stored twice.
 	webgl_loader::CompressAABBToUtf8(group_starts[group_index].bounds,

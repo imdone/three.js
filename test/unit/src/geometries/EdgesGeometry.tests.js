@@ -192,7 +192,7 @@ function initDebug() {
 
 	document.body.appendChild( renderer.domElement );
 
-	var controls = new THREE.OrbitControls( camera, renderer.domElement ); // TODO: please do somethings for that -_-'
+	var controls = new THREE.OrbitControls( camera, renderer.domElement ); // TODO: please do somethings for that -_-' id:131
 	controls.target = new Vector3( 30, 0, 0 );
 
 	animate();

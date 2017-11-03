@@ -121,7 +121,7 @@ var DEFAULT_DECODE_PARAMS = {
 	decodeOffsets: [ - 4095, - 4095, - 4095, 0, 0, - 511, - 511, - 511 ],
 	decodeScales: [ 1 / 8191, 1 / 8191, 1 / 8191, 1 / 1023, 1 / 1023, 1 / 1023, 1 / 1023, 1 / 1023 ]
 
-	// TODO: normal decoding? (see walt.js)
+	// TODO: normal decoding? (see walt.js) id:54
 	// needs to know: input, output (from vertex format!)
 	//
 	// Should split attrib/index.
@@ -135,7 +135,7 @@ var DEFAULT_DECODE_PARAMS = {
 
 // Triangle strips!
 
-// TODO: will it be an optimization to specialize this method at
+// TODO: will it be an optimization to specialize this method at id:15
 // runtime for different combinations of stride, decodeOffset and
 // decodeScale?
 
@@ -563,7 +563,7 @@ THREE.UTF8Loader.prototype.downloadMesh = function ( path, name, meshEntry, deco
 
 		onprogress( data );
 
-		// TODO: handle errors.
+		// TODO: handle errors. id:28
 
 	} );
 
@@ -741,7 +741,7 @@ function getJsonRequest( url, onjson ) {
 
 function addListeners( dom, listeners ) {
 
-	// TODO: handle event capture, object binding.
+	// TODO: handle event capture, object binding. id:42
 
 	for ( var key in listeners ) {
 

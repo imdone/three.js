@@ -305,7 +305,7 @@ export default QUnit.module( 'Maths', () => {
 
 		QUnit.test( "setFromAxisAngle", ( assert ) => {
 
-			// TODO: find cases to validate.
+			// TODO: find cases to validate. id:109
 			// assert.ok( true, "Passed!" );
 
 			var zero = new Quaternion();
@@ -389,7 +389,7 @@ export default QUnit.module( 'Maths', () => {
 
 			var a = new Quaternion( x, y, z, w );
 
-			// TODO: add better validation here.
+			// TODO: add better validation here. id:190
 
 			var b = a.clone().conjugate();
 

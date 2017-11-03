@@ -603,7 +603,7 @@ function WebGLTextures( _gl, extensions, state, properties, capabilities, utils,
 
 		} else {
 
-			// FIXME: We don't support !depth !stencil
+			// FIXME: We don't support !depth !stencil id:101
 			_gl.renderbufferStorage( _gl.RENDERBUFFER, _gl.RGBA4, renderTarget.width, renderTarget.height );
 
 		}

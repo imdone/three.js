@@ -192,7 +192,7 @@ THREE.CCDIKSolver.prototype = {
 					q.setFromAxisAngle( axis, angle );
 					link.quaternion.multiply( q );
 
-					// TODO: re-consider the limitation specification
+					// TODO: re-consider the limitation specification id:64
 					if ( limitation !== undefined ) {
 
 						var c = link.quaternion.w;

@@ -97,7 +97,7 @@ int main(int argc, const char* argv[]) {
                                   &webgl_meshes);
 
     std::vector<std::string> material;
-    // TODO: is this buffering still necessary?
+    // TODO: is this buffering still necessary? id:238
     std::vector<size_t> attrib_start, attrib_length, 
         code_start, code_length, num_tris;
     for (size_t i = 0; i < webgl_meshes.size(); ++i) {

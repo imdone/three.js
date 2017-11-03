@@ -448,7 +448,7 @@ Object.assign( Box3.prototype, {
 			// transform of empty box is an empty box.
 			if ( this.isEmpty() ) return this;
 
-			// NOTE: I am using a binary pattern to specify all 2^3 combinations below
+			// NOTE: I am using a binary pattern to specify all 2^3 combinations below id:98
 			points[ 0 ].set( this.min.x, this.min.y, this.min.z ).applyMatrix4( matrix ); // 000
 			points[ 1 ].set( this.min.x, this.min.y, this.max.z ).applyMatrix4( matrix ); // 001
 			points[ 2 ].set( this.min.x, this.max.y, this.min.z ).applyMatrix4( matrix ); // 010

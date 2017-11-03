@@ -1091,7 +1091,7 @@ THREE.SEA3D.Object3D.prototype = Object.assign( Object.create( THREE.Object3D.pr
 	constructor: THREE.SEA3D.Object3D,
 
 	// Relative Animation Extension ( Only used if relative animation is enabled )
-	// TODO: It can be done with shader
+	// TODO: It can be done with shader id:16
 
 	updateAnimateMatrix: function ( force ) {
 

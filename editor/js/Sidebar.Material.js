@@ -539,7 +539,7 @@ Sidebar.Material = function ( editor ) {
 				material = new THREE[ materialClass.getValue() ]();
 
 				editor.execute( new SetMaterialCommand( currentObject, material, currentMaterialSlot ), 'New Material: ' + materialClass.getValue() );
-				// TODO Copy other references in the scene graph
+				// TODO Copy other references in the scene graph id:4
 				// keeping name and UUID then.
 				// Also there should be means to create a unique
 				// copy for the current object explicitly and to

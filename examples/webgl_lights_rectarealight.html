@@ -96,7 +96,7 @@
 				var gl = renderer.context;
 
 				// Check for float-RT support
-				// TODO (abelnation): figure out fall-back for float textures
+				// TODO (abelnation): figure out fall-back for float textures id:76
 
 				if ( ! gl.getExtension( 'OES_texture_float' ) ) {
 
@@ -128,12 +128,12 @@
 				rectLight = new THREE.RectAreaLight( 0xffffff, 500, 10, 10 );
 				rectLight.position.set( 5, 5, 0 );
 
-				// TODO: ensure RectAreaLight handles target param correctly
+				// TODO: ensure RectAreaLight handles target param correctly id:58
 
 				rectLightHelper = new THREE.RectAreaLightHelper( rectLight );
 				scene.add( rectLightHelper );
 
-				// TODO (abelnation): rect light shadow
+				// TODO (abelnation): rect light shadow id:79
 
 				scene.add( camera );
 				scene.add( origin );
@@ -298,7 +298,7 @@
 
 				} );
 
-				// TODO (abelnation): use env map to reflect metal property
+				// TODO (abelnation): use env map to reflect metal property id:94
 				standardFolder.add( param, 'metalness', 0.0, 1.0 ).step( 0.01 ).onChange( function ( val ) {
 
 					matStdObjects.metalness = val;
@@ -308,8 +308,8 @@
 
 				standardFolder.open();
 
-				// TODO: rect area light distance
-				// TODO: rect area light decay
+				// TODO: rect area light distance id:46
+				// TODO: rect area light decay id:160
 
 			}
 

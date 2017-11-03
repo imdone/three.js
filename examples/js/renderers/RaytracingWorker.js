@@ -26,7 +26,7 @@ self.onmessage = function( e ) {
 
 		renderer.setSize( width, height );
 
-		// TODO fix passing maxRecursionDepth as parameter.
+		// TODO fix passing maxRecursionDepth as parameter. id:77
 		// if (data.maxRecursionDepth) maxRecursionDepth = data.maxRecursionDepth;
 
 		completed = 0;

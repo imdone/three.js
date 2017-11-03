@@ -1667,7 +1667,7 @@ THREE.DeferredShaderChunk = {
 
 	].join( "\n" ),
 
-	// TODO: calculate schlick
+	// TODO: calculate schlick id:57
 	computeSpecular: [
 
 		"vec3 halfVector = normalize( lightVector - normalize( vertexPositionVS.xyz ) );",
@@ -2481,7 +2481,7 @@ THREE.ShaderDeferred = {
 
 	},
 
-	// TODO: implement tone mapping
+	// TODO: implement tone mapping id:78
 	final: {
 
 		uniforms: {

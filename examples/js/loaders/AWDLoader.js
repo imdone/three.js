@@ -329,7 +329,7 @@
 			meshLen = geometries.length;
 			meshes = [];
 
-			// TODO : BufferGeometry don't support "geometryGroups" for now.
+			// TODO : BufferGeometry don't support "geometryGroups" for now. id:22
 			// so we create sub meshes for each groups
 			if ( meshLen > 1 ) {
 
@@ -1198,7 +1198,7 @@
 		 */
 		readUTFBytes: function ( len ) {
 
-			// TODO(user): Use native implementations if/when available
+			// TODO (user): Use native implementations if/when available id:36
 			var out = [], c = 0;
 
 			while ( out.length < len ) {

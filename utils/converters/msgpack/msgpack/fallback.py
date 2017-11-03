@@ -390,11 +390,11 @@ class Unpacker(object):
             if typ != TYPE_MAP:
                 raise UnpackValueError("Expected map")
             return n
-        # TODO should we eliminate the recursion?
+        # TODO should we eliminate the recursion? id:142
         if typ == TYPE_ARRAY:
             if execute == EX_SKIP:
                 for i in xrange(n):
-                    # TODO check whether we need to call `list_hook`
+                    # TODO check whether we need to call `list_hook` id:177
                     self._fb_unpack(EX_SKIP, write_bytes)
                 return
             ret = newlist_hint(n)
@@ -402,12 +402,12 @@ class Unpacker(object):
                 ret.append(self._fb_unpack(EX_CONSTRUCT, write_bytes))
             if self._list_hook is not None:
                 ret = self._list_hook(ret)
-            # TODO is the interaction between `list_hook` and `use_list` ok?
+            # TODO is the interaction between `list_hook` and `use_list` ok? id:120
             return ret if self._use_list else tuple(ret)
         if typ == TYPE_MAP:
             if execute == EX_SKIP:
                 for i in xrange(n):
-                    # TODO check whether we need to call hooks
+                    # TODO check whether we need to call hooks id:201
                     self._fb_unpack(EX_SKIP, write_bytes)
                     self._fb_unpack(EX_SKIP, write_bytes)
                 return

@@ -2,7 +2,7 @@
  * Uniforms library for RectAreaLight shared webgl shaders
  * @author abelnation
  *
- * NOTE: This is a temporary location for the BRDF approximation texture data
+ * NOTE: This is a temporary location for the BRDF approximation texture data id:9
  *       based off of Eric Heitz's work (see citation below).  BRDF data for
  *       RectAreaLight is currently approximated using a precomputed texture
  *       of roughly 80kb in size.  The hope is to find a better way to include

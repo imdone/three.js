@@ -162,7 +162,7 @@ THREE.SimplifyModifier = function() {
 		if ( f.v2 ) removeFromArray( f.v2.faces, f );
 		if ( f.v3 ) removeFromArray( f.v3.faces, f );
 
-		// TODO optimize this!
+		// TODO optimize this! id:29
 		var vs = [ this.v1, this.v2, this.v3 ];
 		var v1, v2;
 
@@ -233,7 +233,7 @@ THREE.SimplifyModifier = function() {
 
 	function minimumCostEdge( vertices ) {
 
-		// O(n * n) approach. TODO optimize this
+		// O(n * n) approach. TODO optimize this id:43
 
 		var least = vertices[ 0 ];
 
@@ -435,7 +435,7 @@ THREE.SimplifyModifier = function() {
 		// console.profileEnd('zz');
 		// console.timeEnd('z')
 
-		// TODO convert to buffer geometry.
+		// TODO convert to buffer geometry. id:74
 		var newGeo = new THREE.Geometry();
 
 		for ( i = 0; i < vertices.length; i ++ ) {

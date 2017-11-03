@@ -503,7 +503,7 @@ def generate_material_dict(scene):
 # #####################################################
 def generate_texture_object(texture):
 
-    #TODO: extract more texture properties
+    #TODO: extract more texture properties id:176
     wrap_u = texture.GetWrapModeU()
     wrap_v = texture.GetWrapModeV()
     offset = texture.GetUVTranslation()
@@ -1151,7 +1151,7 @@ def process_mesh_materials(mesh_list):
     material_offset_list = [0]
     materials_list = []
 
-    #TODO: remove duplicate mesh references
+    #TODO: remove duplicate mesh references id:119
     for mesh in mesh_list:
         node = mesh.GetNode()
 
@@ -1210,7 +1210,7 @@ def process_mesh_polygons(mesh_list, normals_to_indices, colors_to_indices, uvs_
                 control_point_index = mesh.GetPolygonVertex(poly_index, vertex_index)
                 face_vertices.append(control_point_index)
 
-            #TODO: assign a default material to any mesh without one
+            #TODO: assign a default material to any mesh without one id:200
             if len(material_offset_list) <= mesh_index:
                 material_offset = 0
             else:
@@ -1686,7 +1686,7 @@ def generate_light_object(node):
 
         }
 
-    # TODO (abelnation): handle area lights
+    # TODO (abelnation): handle area lights id:207
 
     return output
 

@@ -141,12 +141,12 @@ class ByteHistogramSink : public ByteSinkInterface {
   ByteSinkInterface* sink_;  // unowned.
 };
 
-// TODO: does it make sense to have a global enum? How should 
+// TODO: does it make sense to have a global enum? How should  id:224
 // new BufferedInput implementations define new error codes? 
 enum ErrorCode {
   kNoError = 0, 
   kEndOfFile = 1,
-  kFileError = 2,  // TODO: translate errno.
+  kFileError = 2,  // TODO: translate errno. id:185
 };
 
 // Adapted from ryg's BufferedStream abstraction:
@@ -236,14 +236,14 @@ class BufferedInputStream : public BufferedInput {
         size_(size) {
     DCHECK(buf != NULL);
     // Disable buffering since we're doing it ourselves.
-    // TODO check error.
+    // TODO check error. id:212
     setvbuf(fp_, NULL, _IONBF, 0);
     cursor = buf;
     begin_ = buf;
     end_ = buf;
   }
  protected:
-  // TODO: figure out how to automate this casting pattern.
+  // TODO: figure out how to automate this casting pattern. id:231
   static ErrorCode RefillFread(BufferedInput* bi) {
     return static_cast<BufferedInputStream*>(bi)->DoRefillFread();
   }

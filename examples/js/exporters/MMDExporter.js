@@ -71,14 +71,14 @@ THREE.MMDExporter = function () {
 
 	}
 
-	/* TODO: implement
+	/* TODO: implement id:35
 	// mesh -> pmd
 	this.parsePmd = function ( object ) {
 
 	};
 	*/
 
-	/* TODO: implement
+	/* TODO: implement id:66
 	// mesh -> pmx
 	this.parsePmx = function ( object ) {
 
@@ -200,7 +200,7 @@ THREE.MMDExporter = function () {
 
 	};
 
-	/* TODO: implement
+	/* TODO: implement id:48
 	// animation + skeleton -> vmd
 	this.parseVmd = function ( object ) {
 

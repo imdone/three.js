@@ -149,7 +149,7 @@ THREE.ParametricGeometries.TubeGeometry = function ( path, segments, radius, seg
 
 		}
 
-		var cx = - scope.radius * Math.cos( v ); // TODO: Hack: Negating it so it faces outside.
+		var cx = - scope.radius * Math.cos( v ); // TODO: Hack: Negating it so it faces outside. id:2
 		var cy = scope.radius * Math.sin( v );
 
 		pos.x += cx * normal.x + cy * binormal.x;

@@ -77,7 +77,7 @@ function loadObject( data ) {
 
     var hasLights = false;
 
-    // TODO: RectAreaLight support
+    // TODO: RectAreaLight support id:216
     var lights = ['AmbientLight', 'DirectionalLight',
         'PointLight', 'SpotLight', 'RectAreaLight', 'HemisphereLight'];
 

@@ -1440,7 +1440,7 @@ THREE.LegacyGLTFLoader = ( function () {
 
 									break;
 
-								// TODO: implement
+								// TODO: implement id:55
 								case 'SCISSOR_TEST':
 								case 'POLYGON_OFFSET_FILL':
 								case 'SAMPLE_ALPHA_TO_COVERAGE':
