@@ -656,7 +656,7 @@ export default QUnit.module( 'Core', () => {
 
 				}
 
-				// TODO
+				// TODO id:169
 				// DirectGeometry doesn't actually copy boundingSphere and boundingBox yet,
 				// so they're always null
 				if ( geometry.boundingSphere !== null ) {

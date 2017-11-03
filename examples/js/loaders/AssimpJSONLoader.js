@@ -181,7 +181,7 @@ THREE.AssimpJSONLoader.prototype = {
 
 							var texture = textureLoader.load( value );
 
-							// TODO: read texture settings from assimp.
+							// TODO: read texture settings from assimp. id:67
 							// Wrapping is the default, though.
 
 							texture.wrapS = texture.wrapT = THREE.RepeatWrapping;

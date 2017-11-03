@@ -1107,7 +1107,7 @@ THREE.FXAAShader = {
         "    vec4(0.0)",
         "  );",
         "",
-        "  // TODO avoid querying texture twice for same texel",
+        "  // TODO avoid querying texture twice for same texel", id:93
         "  gl_FragColor.a = texture2D(tDiffuse, vUv).a;",
         "}"
 	].join("\n")

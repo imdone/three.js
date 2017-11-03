@@ -202,7 +202,7 @@ Object.assign( Texture.prototype, EventDispatcher.prototype, {
 
 		if ( this.image !== undefined ) {
 
-			// TODO: Move to THREE.Image
+			// TODO: Move to THREE.Image id:167
 
 			var image = this.image;
 

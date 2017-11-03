@@ -2,8 +2,8 @@
  * @author TristanVALCKE / https://github.com/Itee
  */
 
-// TODO (Itee) Editor is not es6 module so care to include order !!!
-// TODO: all views could not be testable, waiting modular code before implement units tests on them
+// TODO (Itee) Editor is not es6 module so care to include order !!! id:147
+// TODO: all views could not be testable, waiting modular code before implement units tests on them id:129
 
 //editor
 import './unit/editor/Command.tests';

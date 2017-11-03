@@ -1678,7 +1678,7 @@ pp.parseStatement = function (declaration, topLevel) {
     case tt._try:
       return this.parseTryStatement(node);
     case tt._let:case tt._const:
-      if (!declaration) this.unexpected(); // NOTE: falls through to _var
+      if (!declaration) this.unexpected(); // NOTE: falls through to _var id:31
     case tt._var:
       return this.parseVarStatement(node, starttype);
     case tt._while:

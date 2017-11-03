@@ -330,7 +330,7 @@ THREE.GLTFLoader = ( function () {
 
 		var keys = [];
 
-		// TODO: Currently ignored: 'ambientFactor', 'ambientTexture'
+		// TODO: Currently ignored: 'ambientFactor', 'ambientTexture' id:50
 		switch ( khrMaterial.type ) {
 
 			case 'commonBlinn' :
@@ -1174,7 +1174,7 @@ THREE.GLTFLoader = ( function () {
 	/**
 	 * Specification: https://github.com/KhronosGroup/glTF/blob/master/specification/2.0/README.md#morph-targets
 	 *
-	 * TODO: Implement support for morph targets on TANGENT attribute.
+	 * TODO: Implement support for morph targets on TANGENT attribute. id:11
 	 *
 	 * @param {THREE.Mesh} mesh
 	 * @param {GLTF.Mesh} meshDef
@@ -2126,7 +2126,7 @@ THREE.GLTFLoader = ( function () {
 					if ( sampler ) {
 
 						var target = channel.target;
-						var name = target.node !== undefined ? target.node : target.id; // NOTE: target.id is deprecated.
+						var name = target.node !== undefined ? target.node : target.id; // NOTE: target.id is deprecated. id:24
 						var input = animation.parameters !== undefined ? animation.parameters[ sampler.input ] : sampler.input;
 						var output = animation.parameters !== undefined ? animation.parameters[ sampler.output ] : sampler.output;
 

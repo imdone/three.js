@@ -48,7 +48,7 @@ THREE.MarchingCubes = function ( resolution, material, enableUvs, enableColors )
 
 		// immediate render mode simulator
 
-		this.maxCount = 4096; // TODO: find the fastest size for this buffer
+		this.maxCount = 4096; // TODO: find the fastest size for this buffer id:63
 		this.count = 0;
 
 		this.hasPositions = false;

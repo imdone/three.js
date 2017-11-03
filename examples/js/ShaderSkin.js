@@ -246,7 +246,7 @@ THREE.ShaderSkin = {
 
 				"outgoingLight += diffuseColor.xyz * ( totalDiffuseLight + ambientLightColor * diffuse ) + totalSpecularLight;",
 
-				"gl_FragColor = linearToOutputTexel( vec4( outgoingLight, diffuseColor.a ) );",	// TODO, this should be pre-multiplied to allow for bright highlights on very transparent objects
+				"gl_FragColor = linearToOutputTexel( vec4( outgoingLight, diffuseColor.a ) );",	// TODO , this should be pre-multiplied to allow for bright highlights on very transparent objects id:6
 
 				THREE.ShaderChunk[ "fog_fragment" ],
 
@@ -547,7 +547,7 @@ THREE.ShaderSkin = {
 
 				"}",
 
-				"gl_FragColor = vec4( outgoingLight, diffuseColor.a );",	// TODO, this should be pre-multiplied to allow for bright highlights on very transparent objects
+				"gl_FragColor = vec4( outgoingLight, diffuseColor.a );",	// TODO , this should be pre-multiplied to allow for bright highlights on very transparent objects id:19
 
 				THREE.ShaderChunk[ "fog_fragment" ],
 

@@ -991,7 +991,7 @@
 			var n31 = te[ 2 ], n32 = te[ 6 ], n33 = te[ 10 ], n34 = te[ 14 ];
 			var n41 = te[ 3 ], n42 = te[ 7 ], n43 = te[ 11 ], n44 = te[ 15 ];
 
-			//TODO: make this more efficient
+			//TODO: make this more efficient id:133
 			//( based on http://www.euclideanspace.com/maths/algebra/matrix/functions/inverse/fourD/index.htm )
 
 			return (
@@ -2508,7 +2508,7 @@
 
 		},
 
-		// TODO lengthSquared?
+		// TODO lengthSquared? id:106
 
 		lengthSq: function () {
 
@@ -10631,7 +10631,7 @@
 				// transform of empty box is an empty box.
 				if ( this.isEmpty() ) return this;
 
-				// NOTE: I am using a binary pattern to specify all 2^3 combinations below
+				// NOTE: I am using a binary pattern to specify all 2^3 combinations below id:111
 				points[ 0 ].set( this.min.x, this.min.y, this.min.z ).applyMatrix4( matrix ); // 000
 				points[ 1 ].set( this.min.x, this.min.y, this.max.z ).applyMatrix4( matrix ); // 001
 				points[ 2 ].set( this.min.x, this.max.y, this.min.z ).applyMatrix4( matrix ); // 010
@@ -16648,7 +16648,7 @@
 			if ( this.visible === false ) data.visible = false;
 			if ( JSON.stringify( this.userData ) !== '{}' ) data.userData = this.userData;
 
-			// TODO: Copied from Object3D.toJSON
+			// TODO: Copied from Object3D.toJSON id:192
 
 			function extractFromCache( cache ) {
 
@@ -19121,16 +19121,16 @@
 
 				var clonedCam = cam.clone();
 
-				// TODO: Uuuummmhhh DO NOT relie equality on object methods !
-				// TODO: What's append if matrix.equal is wrongly implemented ???
-				// TODO: this MUST be check by assert
+				// TODO: Uuuummmhhh DO NOT relie equality on object methods ! id:152
+				// TODO: What's append if matrix.equal is wrongly implemented ??? id:134
+				// TODO: this MUST be check by assert id:107
 				assert.ok( cam.matrixWorldInverse.equals( clonedCam.matrixWorldInverse ), "matrixWorldInverse is equal" );
 				assert.ok( cam.projectionMatrix.equals( clonedCam.projectionMatrix ), "projectionMatrix is equal" );
 
 			} );
 
 			// OTHERS
-			// TODO: this should not be here !!! This is Object3D stuff !!!
+			// TODO: this should not be here !!! This is Object3D stuff !!! id:112
 			QUnit.test( "lookAt", ( assert ) => {
 
 				var cam = new Camera();
@@ -19341,7 +19341,7 @@
 
 			if ( this.image !== undefined ) {
 
-				// TODO: Move to THREE.Image
+				// TODO: Move to THREE.Image id:193
 
 				var image = this.image;
 
@@ -19774,7 +19774,7 @@
 			} );
 
 			// OTHERS
-			// TODO: no no no clone is a camera methods that relied to copy method
+			// TODO: no no no clone is a camera methods that relied to copy method id:153
 			QUnit.test( "clone", ( assert ) => {
 
 				var left = - 1.5, right = 1.5, top = 1, bottom = - 1, near = 0.1, far = 42;
@@ -19933,7 +19933,7 @@
 			} );
 
 			// OTHERS
-			// TODO: no no no clone is a camera methods that relied to copy method
+			// TODO: no no no clone is a camera methods that relied to copy method id:135
 			QUnit.test( "clone", ( assert ) => {
 
 				var near = 1,
@@ -23064,7 +23064,7 @@
 				// parse implicit morph animations
 				if ( geometry.morphTargets ) {
 
-					// TODO: Figure out what an appropraite FPS is for morph target animations -- defaulting to 10, but really it is completely arbitrary.
+					// TODO: Figure out what an appropraite FPS is for morph target animations -- defaulting to 10, but really it is completely arbitrary. id:170
 					var morphAnimationClips = AnimationClip.CreateClipsFromMorphTargetSequences( geometry.morphTargets, 10 );
 					outputAnimations = outputAnimations.concat( morphAnimationClips );
 
@@ -23976,7 +23976,7 @@
 
 					}
 
-					// TODO
+					// TODO id:113
 					// DirectGeometry doesn't actually copy boundingSphere and boundingBox yet,
 					// so they're always null
 					if ( geometry.boundingSphere !== null ) {
@@ -26462,7 +26462,7 @@
 
 			// PUBLIC STUFF
 			// setY, setZ and setW are calculated in the same way so not QUnit.testing this
-			// TODO: ( you can't be sure that will be the case in future, or a mistake was introduce in one off them ! )
+			// TODO: ( you can't be sure that will be the case in future, or a mistake was introduce in one off them ! ) id:194
 			QUnit.test( "setX", ( assert ) => {
 
 				var buffer = new InterleavedBuffer( new Float32Array( [ 1, 2, 3, 7, 8, 9 ] ), 3 );
@@ -29729,7 +29729,7 @@
 
 		moveTo: function ( x, y ) {
 
-			this.currentPoint.set( x, y ); // TODO consider referencing vectors instead of copying?
+			this.currentPoint.set( x, y ); // TODO consider referencing vectors instead of copying? id:154
 
 		},
 
@@ -35144,7 +35144,7 @@
 				groundColor: {}
 			} },
 
-			// TODO (abelnation): RectAreaLight BRDF data needs to be moved from example to main src
+			// TODO (abelnation): RectAreaLight BRDF data needs to be moved from example to main src id:136
 			rectAreaLights: { value: [], properties: {
 				color: {},
 				position: {},
@@ -36993,7 +36993,7 @@
 
 			if ( lights.length === 0 ) return;
 
-			// TODO Clean up (needed in case of contextlost)
+			// TODO Clean up (needed in case of contextlost) id:171
 			var _gl = _renderer.context;
 			var _state = _renderer.state;
 
@@ -37689,7 +37689,7 @@
 
 				planeMesh.material.map = background;
 
-				// TODO Push this to renderList
+				// TODO Push this to renderList id:114
 
 				renderer.renderBufferDirect( planeCamera, null, planeMesh.geometry, planeMesh.material, planeMesh, null );
 
@@ -38162,7 +38162,7 @@
 
 			delete geometries[ geometry.id ];
 
-			// TODO Remove duplicate code
+			// TODO Remove duplicate code id:195
 
 			var attribute = wireframeAttributes[ geometry.id ];
 
@@ -38402,7 +38402,7 @@
 							position: new Vector3(),
 							halfWidth: new Vector3(),
 							halfHeight: new Vector3()
-							// TODO (abelnation): set RectAreaLight shadow uniforms
+							// TODO (abelnation): set RectAreaLight shadow uniforms id:155
 						};
 						break;
 
@@ -38565,7 +38565,7 @@
 					uniforms.halfWidth.applyMatrix4( matrix42 );
 					uniforms.halfHeight.applyMatrix4( matrix42 );
 
-					// TODO (abelnation): RectAreaLight distance?
+					// TODO (abelnation): RectAreaLight distance? id:137
 					// uniforms.distance = distance;
 
 					state.rectArea[ rectAreaLength ] = uniforms;
@@ -38632,7 +38632,7 @@
 			state.point.length = pointLength;
 			state.hemi.length = hemiLength;
 
-			// TODO (sam-g-steel) why aren't we using join
+			// TODO (sam-g-steel) why aren't we using join id:172
 			state.hash = directionalLength + ',' + pointLength + ',' + spotLength + ',' + rectAreaLength + ',' + hemiLength + ',' + shadows.length;
 
 		}
@@ -40314,7 +40314,7 @@
 
 			} else {
 
-				// FIXME: We don't support !depth !stencil
+				// FIXME: We don't support !depth !stencil id:115
 				_gl.renderbufferStorage( _gl.RENDERBUFFER, _gl.RGBA4, renderTarget.width, renderTarget.height );
 
 			}
@@ -41770,7 +41770,7 @@
 			cameraL.projectionMatrix.fromArray( frameData.leftProjectionMatrix );
 			cameraR.projectionMatrix.fromArray( frameData.rightProjectionMatrix );
 
-			// HACK @mrdoob
+			// HACK @mrdoob id:196
 			// https://github.com/w3c/webvr/issues/203
 
 			cameraVR.projectionMatrix.copy( cameraL.projectionMatrix );
@@ -43014,7 +43014,7 @@
 
 						var attribute = attributes.get( geometryAttribute );
 
-						// TODO Attribute may not be available on context restore
+						// TODO Attribute may not be available on context restore id:156
 
 						if ( attribute === undefined ) continue;
 
@@ -43348,7 +43348,7 @@
 		};
 
 		/*
-		// TODO Duplicated code (Frustum)
+		// TODO Duplicated code (Frustum) id:138
 
 		var _sphere = new Sphere();
 
@@ -43715,7 +43715,7 @@
 				uniforms.spotShadowMatrix.value = lights.state.spotShadowMatrix;
 				uniforms.pointShadowMap.value = lights.state.pointShadowMap;
 				uniforms.pointShadowMatrix.value = lights.state.pointShadowMatrix;
-				// TODO (abelnation): add area lights shadow info to uniforms
+				// TODO (abelnation): add area lights shadow info to uniforms id:173
 
 			}
 
@@ -44022,7 +44022,7 @@
 				}
 
 				// RectAreaLight Texture
-				// TODO (mrdoob): Find a nicer implementation
+				// TODO (mrdoob): Find a nicer implementation id:116
 
 				if ( m_uniforms.ltcMat !== undefined ) m_uniforms.ltcMat.value = UniformsLib.LTC_MAT_TEXTURE;
 				if ( m_uniforms.ltcMag !== undefined ) m_uniforms.ltcMag.value = UniformsLib.LTC_MAG_TEXTURE;
@@ -44526,7 +44526,7 @@
 				}
 
 				// currently relying on the fact that WebGLRenderTargetCube.texture is a Texture and NOT a CubeTexture
-				// TODO: unify these code paths
+				// TODO: unify these code paths id:197
 				if ( ( texture && texture.isCubeTexture ) ||
 					( Array.isArray( texture.image ) && texture.image.length === 6 ) ) {
 
@@ -44866,7 +44866,7 @@
 
 		document.body.appendChild( renderer.domElement );
 
-		var controls = new THREE.OrbitControls( camera, renderer.domElement ); // TODO: please do somethings for that -_-'
+		var controls = new THREE.OrbitControls( camera, renderer.domElement ); // TODO: please do somethings for that -_-' id:157
 		controls.target = new Vector3( 30, 0, 0 );
 
 		animate();
@@ -45134,7 +45134,7 @@
 
 			// SETUP TNB variables
 
-			// TODO1 - have a .isClosed in spline?
+			// TODO 1 - have a .isClosed in spline? id:139
 
 			splineTube = options.frames !== undefined ? options.frames : extrudePath.computeFrenetFrames( steps, false );
 
@@ -47682,7 +47682,7 @@
 			var geometries = undefined;
 			hooks.beforeEach( function () {
 
-				// TODO: we cannot load any font from Threejs package :S
+				// TODO: we cannot load any font from Threejs package :S id:174
 				const parameters = {
 					font: undefined
 				};
@@ -50942,15 +50942,15 @@
 		this.width = ( width !== undefined ) ? width : 10;
 		this.height = ( height !== undefined ) ? height : 10;
 
-		// TODO (abelnation): distance/decay
+		// TODO (abelnation): distance/decay id:117
 
-		// TODO (abelnation): update method for RectAreaLight to update transform to lookat target
+		// TODO (abelnation): update method for RectAreaLight to update transform to lookat target id:198
 
-		// TODO (abelnation): shadows
+		// TODO (abelnation): shadows id:158
 
 	}
 
-	// TODO (abelnation): RectAreaLight update when light shape is changed
+	// TODO (abelnation): RectAreaLight update when light shape is changed id:140
 	RectAreaLight.prototype = Object.assign( Object.create( Light.prototype ), {
 
 		constructor: RectAreaLight,
@@ -59584,7 +59584,7 @@
 
 			QUnit.test( "setFromAxisAngle", ( assert ) => {
 
-				// TODO: find cases to validate.
+				// TODO: find cases to validate. id:175
 				// assert.ok( true, "Passed!" );
 
 				var zero = new Quaternion();
@@ -59668,7 +59668,7 @@
 
 				var a = new Quaternion( x, y, z, w );
 
-				// TODO: add better validation here.
+				// TODO: add better validation here. id:118
 
 				var b = a.clone().conjugate();
 
@@ -61481,7 +61481,7 @@
 			} );
 
 
-			// TODO (Itee) refactor/split
+			// TODO (Itee) refactor/split id:199
 			QUnit.test( "setX,setY", ( assert ) => {
 
 				var a = new Vector2();
@@ -62445,7 +62445,7 @@
 
 			} );
 
-			// TODO (Itee) refactor/split
+			// TODO (Itee) refactor/split id:159
 			QUnit.test( "setX,setY,setZ", ( assert ) => {
 
 				var a = new Vector3();
@@ -63192,7 +63192,7 @@
 
 			} );
 
-			// TODO (Itee) refactor/split
+			// TODO (Itee) refactor/split id:141
 			QUnit.test( "setX,setY,setZ,setW", ( assert ) => {
 
 				var a = new Vector4();

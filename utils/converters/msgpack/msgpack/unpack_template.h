@@ -119,7 +119,7 @@ static inline int unpack_execute(unpack_context* ctx, const char* data, size_t l
     goto _fixed_trail_again
 
 #define start_container(func, count_, ct_) \
-    if(top >= MSGPACK_EMBED_STACK_SIZE) { goto _failed; } /* FIXME */ \
+    if(top >= MSGPACK_EMBED_STACK_SIZE) { goto _failed; } /* FIXME id:208*/ \
     if(construct_cb(func)(user, count_, &stack[top].obj) < 0) { goto _failed; } \
     if((count_) == 0) { obj = stack[top].obj; \
         if (construct_cb(func##_end)(user, &obj) < 0) { goto _failed; } \
@@ -130,7 +130,7 @@ static inline int unpack_execute(unpack_context* ctx, const char* data, size_t l
     ++top; \
     /*printf("container %d count %d stack %d\n",stack[top].obj,count_,top);*/ \
     /*printf("stack push %d\n", top);*/ \
-    /* FIXME \
+    /* FIXME \ id:217
     if(top >= stack_size) { \
         if(stack_size == MSGPACK_EMBED_STACK_SIZE) { \
             size_t csize = sizeof(unpack_stack) * MSGPACK_EMBED_STACK_SIZE; \
@@ -314,13 +314,13 @@ static inline int unpack_execute(unpack_context* ctx, const char* data, size_t l
             case CS_ARRAY_16:
                 start_container(_array, _msgpack_load16(uint16_t,n), CT_ARRAY_ITEM);
             case CS_ARRAY_32:
-                /* FIXME security guard */
+                /* FIXME security guard  id:178*/
                 start_container(_array, _msgpack_load32(uint32_t,n), CT_ARRAY_ITEM);
 
             case CS_MAP_16:
                 start_container(_map, _msgpack_load16(uint16_t,n), CT_MAP_KEY);
             case CS_MAP_32:
-                /* FIXME security guard */
+                /* FIXME security guard  id:121*/
                 start_container(_map, _msgpack_load32(uint32_t,n), CT_MAP_KEY);
 
             default:

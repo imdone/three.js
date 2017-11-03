@@ -483,7 +483,7 @@ def _json_floatstr(o):
 
 def _make_iterencode(markers, _default, _encoder, _indent, _floatstr,
         _key_separator, _item_separator, _sort_keys, _skipkeys, _one_shot,
-        ## HACK: hand-optimized bytecode; turn globals into locals
+        ## HACK: hand-optimized bytecode; turn globals into locals id:235
         ValueError=ValueError,
         basestring=basestring,
         dict=dict,

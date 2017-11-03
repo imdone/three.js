@@ -217,10 +217,10 @@ AMBIENT_LIGHT = 'AmbientLight'
 DIRECTIONAL_LIGHT = 'DirectionalLight'
 POINT_LIGHT = 'PointLight'
 SPOT_LIGHT = 'SpotLight'
-# TODO (abelnation): confirm this is correct area light string for exporter
+# TODO (abelnation): confirm this is correct area light string for exporter id:241
 RECT_AREA_LIGHT = 'RectAreaLight'
 HEMISPHERE_LIGHT = 'HemisphereLight'
-# TODO: RectAreaLight support
+# TODO: RectAreaLight support id:225
 MESH = 'Mesh'
 EMPTY = 'Empty'
 SPRITE = 'Sprite'

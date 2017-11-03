@@ -51,7 +51,7 @@ class ShortFloatList {
   }
 
   // Parse up to kMaxNumFloats from C string.
-  // TODO: this should instead return endptr, since size
+  // TODO: this should instead return endptr, since size id:236
   // is recoverable.
   size_t ParseLine(const char* line) {
     for (size_ = 0; size_ != kMaxNumFloats; ++size_) {
@@ -208,7 +208,7 @@ static inline size_t positionDim() { return 3; }
 static inline size_t texcoordDim() { return 2; }
 static inline size_t normalDim() { return 3; }
 
-// TODO(wonchun): Make a c'tor to properly initialize.
+// TODO (wonchun): Make a c'tor to properly initialize. id:220
 struct GroupStart {
   size_t offset;  // offset into draw_mesh_.indices.
   unsigned int group_line;
@@ -291,7 +291,7 @@ class DrawBatch {
                 normals_->at(normalDim() * normal_index + i));
           }
         }
-        // TODO: is the covariance body useful for anything?
+        // TODO: is the covariance body useful for anything? id:181
         group.bounds.EncloseAttrib(&draw_mesh_.attribs[new_loc]);
       }
     }
@@ -344,9 +344,9 @@ class WavefrontMtlFile {
   }
 
  private:
-  // TODO: factor this parsing stuff out.
+  // TODO: factor this parsing stuff out. id:124
   void ParseFile(FILE* fp) {
-    // TODO: don't use a fixed-size buffer.
+    // TODO: don't use a fixed-size buffer. id:205
     const size_t kLineBufferSize = 256;
     char buffer[kLineBufferSize];
     unsigned int line_num = 1;
@@ -414,7 +414,7 @@ class WavefrontMtlFile {
 
 typedef std::map<std::string, DrawBatch> MaterialBatches;
 
-// TODO: consider splitting this into a low-level parser and a high-level
+// TODO: consider splitting this into a low-level parser and a high-level id:237
 // object.
 class WavefrontObjFile {
  public:
@@ -465,7 +465,7 @@ class WavefrontObjFile {
   WavefrontObjFile() { }  // For testing.
 
   void ParseFile(FILE* fp) {
-    // TODO: don't use a fixed-size buffer.
+    // TODO: don't use a fixed-size buffer. id:221
     const size_t kLineBufferSize = 256;
     char buffer[kLineBufferSize] = { 0 };
     unsigned int line_num = 1;
@@ -548,7 +548,7 @@ class WavefrontObjFile {
 
   void ParseTexCoord(const ShortFloatList& floats, unsigned int line_num) {
     if ((floats.size() < 1) || (floats.size() > 3)) {
-      // TODO: correctly handle 3-D texcoords intead of just
+      // TODO: correctly handle 3-D texcoords intead of just id:182
       // truncating.
       ErrorLine("bad texcoord", line_num);
     }
@@ -584,7 +584,7 @@ class WavefrontObjFile {
     // Also handle face outlines as faces.
     if (*line == 'o') ++line;
 
-    // TODO: instead of storing these indices as-is, it might make
+    // TODO: instead of storing these indices as-is, it might make id:125
     // sense to flatten them right away. This can reduce memory
     // consumption and improve access locality, especially since .OBJ
     // face indices are so needlessly large.
@@ -612,7 +612,7 @@ class WavefrontObjFile {
   }
 
   // Parse a single group of indices, separated by slashes ('/').
-  // TODO: convert negative indices (that is, relative to the end of
+  // TODO: convert negative indices (that is, relative to the end of id:206
   // the current vertex positions) to more conventional positive
   // indices.
   const char* ParseIndices(const char* line, unsigned int line_num,

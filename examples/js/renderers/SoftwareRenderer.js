@@ -159,7 +159,7 @@ THREE.SoftwareRenderer = function ( parameters ) {
 
 	this.render = function ( scene, camera ) {
 
-		// TODO: Check why autoClear can't be false.
+		// TODO: Check why autoClear can't be false. id:30
 		this.clear();
 
 		var background = scene.background;
@@ -682,7 +682,7 @@ THREE.SoftwareRenderer = function ( parameters ) {
 
 	function drawTriangle( v1, v2, v3, uv1, uv2, uv3, shader, face, material ) {
 
-		// TODO: Implement per-pixel z-clipping
+		// TODO: Implement per-pixel z-clipping id:44
 
 		if ( v1.z < - 1 || v1.z > 1 || v2.z < - 1 || v2.z > 1 || v3.z < - 1 || v3.z > 1 ) return;
 
@@ -1411,7 +1411,7 @@ THREE.SoftwareRenderer = function ( parameters ) {
 
 		}
 
-		// TODO: Implement per-pixel z-clipping
+		// TODO: Implement per-pixel z-clipping id:75
 		if ( v1.z < - 1 || v1.z > 1 || v2.z < - 1 || v2.z > 1 ) return;
 
 		var halfLineWidth = Math.floor( ( material.linewidth - 1 ) * 0.5 );

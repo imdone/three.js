@@ -101,7 +101,7 @@ function WebGLShadowMap( _renderer, _objects, maxTextureSize ) {
 
 		if ( lights.length === 0 ) return;
 
-		// TODO Clean up (needed in case of contextlost)
+		// TODO Clean up (needed in case of contextlost) id:128
 		var _gl = _renderer.context;
 		var _state = _renderer.state;
 

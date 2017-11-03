@@ -36,7 +36,7 @@ export default QUnit.module( 'Core', () => {
 
 		// PUBLIC STUFF
 		// setY, setZ and setW are calculated in the same way so not QUnit.testing this
-		// TODO: ( you can't be sure that will be the case in future, or a mistake was introduce in one off them ! )
+		// TODO: ( you can't be sure that will be the case in future, or a mistake was introduce in one off them ! ) id:149
 		QUnit.test( "setX", ( assert ) => {
 
 			var buffer = new InterleavedBuffer( new Float32Array( [ 1, 2, 3, 7, 8, 9 ] ), 3 );

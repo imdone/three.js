@@ -21,7 +21,7 @@ from .constants import (
     NO_SHADOW,
     ZYX
 )
-# TODO: RectAreaLight support
+# TODO: RectAreaLight support id:232
 
 
 # Blender doesn't seem to have a good way to link a mesh back to the
@@ -241,7 +241,7 @@ def animated_xform(obj, options):
         appendQuat(track_qua, time, wm.to_quaternion() )
     context.scene.frame_set(original_frame, 0.0)  # restore to original frame
 
-    # TODO: remove duplicated key frames
+    # TODO: remove duplicated key frames id:242
     return tracks
 
 @_object
@@ -311,7 +311,7 @@ def node_type(obj):
     elif obj.type == EMPTY:
         return constants.OBJECT.title()
 
-    # TODO: RectAreaLight support
+    # TODO: RectAreaLight support id:226
     dispatch = {
         LAMP: {
             POINT: constants.POINT_LIGHT,

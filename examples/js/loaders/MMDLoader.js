@@ -609,7 +609,7 @@ THREE.MMDLoader.prototype.createMesh = function ( model, texturePath, onProgress
 
 		var iks = [];
 
-		// TODO: remove duplicated codes between PMD and PMX
+		// TODO: remove duplicated codes between PMD and PMX id:38
 		if ( model.metadata.format === 'pmd' ) {
 
 			for ( var i = 0; i < model.metadata.ikCount; i ++ ) {
@@ -672,7 +672,7 @@ THREE.MMDLoader.prototype.createMesh = function ( model, texturePath, onProgress
 					if ( ik.links[ j ].angleLimitation === 1 ) {
 
 						link.limitation = new THREE.Vector3( 1.0, 0.0, 0.0 );
-						// TODO: use limitation angles
+						// TODO: use limitation angles id:69
 						// link.lowerLimitationAngle;
 						// link.upperLimitationAngle;
 
@@ -811,7 +811,7 @@ THREE.MMDLoader.prototype.createMesh = function ( model, texturePath, onProgress
 
 						} else {
 
-							// TODO: implement
+							// TODO: implement id:51
 
 						}
 
@@ -823,31 +823,31 @@ THREE.MMDLoader.prototype.createMesh = function ( model, texturePath, onProgress
 
 				} else if ( m.type === 2 ) { // bone
 
-					// TODO: implement
+					// TODO: implement id:12
 
 				} else if ( m.type === 3 ) { // uv
 
-					// TODO: implement
+					// TODO: implement id:25
 
 				} else if ( m.type === 4 ) { // additional uv1
 
-					// TODO: implement
+					// TODO: implement id:39
 
 				} else if ( m.type === 5 ) { // additional uv2
 
-					// TODO: implement
+					// TODO: implement id:70
 
 				} else if ( m.type === 6 ) { // additional uv3
 
-					// TODO: implement
+					// TODO: implement id:52
 
 				} else if ( m.type === 7 ) { // additional uv4
 
-					// TODO: implement
+					// TODO: implement id:13
 
 				} else if ( m.type === 8 ) { // material
 
-					// TODO: implement
+					// TODO: implement id:26
 
 				}
 
@@ -1076,7 +1076,7 @@ THREE.MMDLoader.prototype.createMesh = function ( model, texturePath, onProgress
 
 				}
 
-				// TODO: support m.envFlag === 3
+				// TODO: support m.envFlag === 3 id:40
 				if ( m.envTextureIndex !== - 1 && ( m.envFlag === 1 || m.envFlag == 2 ) ) {
 
 					var n = model.textures[ m.envTextureIndex ];
@@ -2079,19 +2079,19 @@ THREE.MMDGrantSolver.prototype = {
 
 				if ( g.isLocal ) {
 
-					// TODO: implement
+					// TODO: implement id:71
 					if ( g.affectPosition ) {
 
 					}
 
-					// TODO: implement
+					// TODO: implement id:53
 					if ( g.affectRotation ) {
 
 					}
 
 				} else {
 
-					// TODO: implement
+					// TODO: implement id:14
 					if ( g.affectPosition ) {
 
 					}
@@ -2300,7 +2300,7 @@ THREE.MMDHelper.prototype = {
 
 			mesh.mixer = new THREE.AnimationMixer( mesh );
 
-			// TODO: find a workaround not to access (seems like) private properties
+			// TODO: find a workaround not to access (seems like) private properties id:27
 			//       the name of them begins with "_".
 			mesh.mixer.addEventListener( 'loop', function ( e ) {
 
@@ -2373,7 +2373,7 @@ THREE.MMDHelper.prototype = {
 	/*
 	 * detect the longest duration among model, camera, and audio animations and then
 	 * set it to them to sync.
-	 * TODO: touching private properties ( ._actions and ._clip ) so consider better way
+	 * TODO: touching private properties ( ._actions and ._clip ) so consider better way id:41
 	 *       to access them for safe and modularity.
 	 */
 	unifyAnimationDuration: function ( params ) {
@@ -2598,7 +2598,7 @@ THREE.MMDHelper.prototype = {
 
 			mixer.update( delta );
 
-			// TODO: Let PerspectiveCamera automatically update?
+			// TODO: Let PerspectiveCamera automatically update? id:72
 			this.camera.updateProjectionMatrix();
 
 			this.camera.up.set( 0, 1, 0 );

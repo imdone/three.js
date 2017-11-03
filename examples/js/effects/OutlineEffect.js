@@ -80,9 +80,9 @@ THREE.OutlineEffect = function ( renderer, parameters ) {
 		"vec4 calculateOutline( vec4 pos, vec3 objectNormal, vec4 skinned ) {",
 
 		"	float thickness = outlineThickness;",
-		"	const float ratio = 1.0;", // TODO: support outline thickness ratio for each vertex
+		"	const float ratio = 1.0;", // TODO: support outline thickness ratio for each vertex id:47
 		"	vec4 pos2 = projectionMatrix * modelViewMatrix * vec4( skinned.xyz + objectNormal, 1.0 );",
-		// NOTE: subtract pos2 from pos because BackSide objectNormal is negative
+		// NOTE: subtract pos2 from pos because BackSide objectNormal is negative id:8
 		"	vec4 norm = normalize( pos - pos2 );",
 		"	return pos + norm * thickness * pos.w * ratio;",
 
@@ -184,7 +184,7 @@ THREE.OutlineEffect = function ( renderer, parameters ) {
 					.replace( /\}\s*$/, vertexShaderChunk2 + '\n}' )
 					// remove any light related lines
 					// Note: here is very sensitive to originalVertexShader
-					// TODO: consider safer way
+					// TODO: consider safer way id:21
 					.replace( /#include\s+<[\w_]*light[\w_]*>/g, '' );
 
 		var defines = {};

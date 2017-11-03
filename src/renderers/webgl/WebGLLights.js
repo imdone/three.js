@@ -84,7 +84,7 @@ function UniformsCache() {
 						position: new Vector3(),
 						halfWidth: new Vector3(),
 						halfHeight: new Vector3()
-						// TODO (abelnation): set RectAreaLight shadow uniforms
+						// TODO (abelnation): set RectAreaLight shadow uniforms id:90
 					};
 					break;
 
@@ -247,7 +247,7 @@ function WebGLLights() {
 				uniforms.halfWidth.applyMatrix4( matrix42 );
 				uniforms.halfHeight.applyMatrix4( matrix42 );
 
-				// TODO (abelnation): RectAreaLight distance?
+				// TODO (abelnation): RectAreaLight distance? id:166
 				// uniforms.distance = distance;
 
 				state.rectArea[ rectAreaLength ] = uniforms;
@@ -314,7 +314,7 @@ function WebGLLights() {
 		state.point.length = pointLength;
 		state.hemi.length = hemiLength;
 
-		// TODO (sam-g-steel) why aren't we using join
+		// TODO (sam-g-steel) why aren't we using join id:146
 		state.hash = directionalLength + ',' + pointLength + ',' + spotLength + ',' + rectAreaLength + ',' + hemiLength + ',' + shadows.length;
 
 	}

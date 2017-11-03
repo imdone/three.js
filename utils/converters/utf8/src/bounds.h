@@ -21,7 +21,7 @@
 
 namespace webgl_loader {
 
-// TODO: arbitrary vertex formats.
+// TODO: arbitrary vertex formats. id:179
 
 struct Bounds {
   float mins[8];
@@ -56,13 +56,13 @@ struct Bounds {
     const float x = maxes[0] - mins[0];
     const float y = maxes[1] - mins[1];
     const float z = maxes[2] - mins[2];
-    return (x > y)  // TODO: max3
+    return (x > y)  // TODO: max3 id:122
         ? ((x > z) ? x : z)
         : ((y > z) ? y : z);
   }
 };
 
-// TODO: make maxPosition et. al. configurable.
+// TODO: make maxPosition et. al. configurable. id:203
 struct BoundsParams {
   static BoundsParams FromBounds(const Bounds& bounds) {
     BoundsParams ret;
@@ -77,7 +77,7 @@ struct BoundsParams {
       ret.decodeScales[i] = scale / maxPosition;
     }
     // TexCoord.
-    // TODO: get bounds-dependent texcoords working!
+    // TODO: get bounds-dependent texcoords working! id:210
     for (size_t i = 3; i < 5; ++i) {
       // const float texScale = bounds.maxes[i] - bounds.mins[i];
       const int maxTexcoord = (1 << 10) - 1;  // 1023
@@ -99,7 +99,7 @@ struct BoundsParams {
   }
 
   void DumpJson(FILE* out = stdout) {
-    // TODO: use JsonSink.
+    // TODO: use JsonSink. id:219
     fputs("{\n", out);
     fprintf(out, "    \"decodeOffsets\": [%d,%d,%d,%d,%d,%d,%d,%d],\n",
             decodeOffsets[0], decodeOffsets[1], decodeOffsets[2],

@@ -15,7 +15,7 @@ export default QUnit.module( 'Geometries', () => {
 		var geometries = undefined;
 		hooks.beforeEach( function () {
 
-			// TODO: we cannot load any font from Threejs package :S
+			// TODO: we cannot load any font from Threejs package :S id:104
 			const parameters = {
 				font: undefined
 			};

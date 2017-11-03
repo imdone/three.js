@@ -482,7 +482,7 @@ Object.assign( Vector3.prototype, {
 
 	},
 
-	// TODO lengthSquared?
+	// TODO lengthSquared? id:164
 
 	lengthSq: function () {
 

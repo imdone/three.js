@@ -148,7 +148,7 @@ class EdgeCachingCompressor {
   // Instead of using an LRU cache of edges, simply scan the history
   // for matching edges.
   void Compress(ByteSinkInterface* utf8) {
-    // TODO: do this pre-quantization.
+    // TODO: do this pre-quantization. id:180
     // Normal prediction.
     const size_t num_attribs = attribs_.size() / 8;
     std::vector<int> crosses(3 * num_attribs);
@@ -277,7 +277,7 @@ class EdgeCachingCompressor {
     // Emit as UTF-8.
     for (size_t i = 0; i < deltas_.size(); ++i) {
       if (!Uint16ToUtf8(deltas_[i], utf8)) {
-        // TODO: bounds-dependent texcoords are still busted :(
+        // TODO: bounds-dependent texcoords are still busted :( id:123
         Uint16ToUtf8(0, utf8);
       }
     }
@@ -427,7 +427,7 @@ class EdgeCachingCompressor {
 
       // Check each edge of the input triangle against |e0| and
       // |e1|. Note that we reverse the winding of the input triangle.
-      // TODO: does this properly handle degenerate input?
+      // TODO: does this properly handle degenerate input? id:204
       if (e0 == i1 && e1 == i0) {
         match_winding[num_matches] = 2;
         match_indices[++num_matches] = i;

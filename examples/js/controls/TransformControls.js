@@ -418,7 +418,7 @@
 			],
 
 			XYZE: [
-				[ new THREE.Mesh() ]// TODO
+				[ new THREE.Mesh() ]// TODO id:20
 			]
 
 		};
@@ -597,8 +597,8 @@
 
 	THREE.TransformControls = function ( camera, domElement ) {
 
-		// TODO: Make non-uniform scale and rotate play nice in hierarchies
-		// TODO: ADD RXYZ contol
+		// TODO: Make non-uniform scale and rotate play nice in hierarchies id:34
+		// TODO: ADD RXYZ contol id:65
 
 		THREE.Object3D.call( this );
 

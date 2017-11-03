@@ -53,7 +53,7 @@ class Object(base_classes.BaseNode):
 
         lightType = self[constants.TYPE]
 
-        # TODO (abelnation): handle Area lights
+        # TODO (abelnation): handle Area lights id:187
         if lightType == constants.SPOT_LIGHT:
             self[constants.ANGLE] = api.light.angle(self.data)
             self[constants.DECAY] = api.light.falloff(self.data)
@@ -109,7 +109,7 @@ class Object(base_classes.BaseNode):
             else:
                 logger.info("%s has no materials", self.node) #manthrax: end multimaterial
 
-        # TODO (abelnation): handle Area lights
+        # TODO (abelnation): handle Area lights id:214
         casts_shadow = (constants.MESH,
                         constants.DIRECTIONAL_LIGHT,
                         constants.SPOT_LIGHT)
@@ -127,7 +127,7 @@ class Object(base_classes.BaseNode):
         camera = (constants.PERSPECTIVE_CAMERA,
                   constants.ORTHOGRAPHIC_CAMERA)
 
-        # TODO (abelnation): handle Area lights
+        # TODO (abelnation): handle Area lights id:233
         lights = (constants.AMBIENT_LIGHT,
                   constants.DIRECTIONAL_LIGHT,
                   constants.POINT_LIGHT,

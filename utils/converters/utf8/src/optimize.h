@@ -21,7 +21,7 @@
 
 #include "base.h"
 
-// TODO: since most vertices are part of 6 faces, you can optimize
+// TODO: since most vertices are part of 6 faces, you can optimize id:126
 // this by using a small inline buffer.
 typedef std::vector<int> FaceList;
 
@@ -31,7 +31,7 @@ class VertexOptimizer {
  public:
   struct TriangleData {
     bool active;  // true iff triangle has not been optimized and emitted.
-    // TODO: eliminate some wasted computation by using this cache.
+    // TODO: eliminate some wasted computation by using this cache. id:229
     // float score;
   };
 
@@ -66,7 +66,7 @@ class VertexOptimizer {
       per_vertex_[indices[3*i + 2]].faces.push_back(i);
     }
 
-    // TODO: with index bounds, no need to recompute everything.
+    // TODO: with index bounds, no need to recompute everything. id:239
     // Compute initial vertex scores.
     for (size_t i = 0; i < per_vertex_.size(); ++i) {
       VertexData& vertex_data = per_vertex_[i];
@@ -101,7 +101,7 @@ class VertexOptimizer {
         }
         // The first time we see an index, not only do we increment
         // next_unused_index_ counter, but we must also copy the
-        // corresponding attributes.  TODO: do quantization here?
+        // corresponding attributes.  TODO: do quantization here? id:223
         per_vertex_[index].output_index = next_unused_index_;
         for (size_t j = 0; j < 8; ++j) {
           mesh->attribs.push_back(attribs_[8*index + j]);
@@ -138,7 +138,7 @@ class VertexOptimizer {
         score = -1.f;
         return;
       }
-      // TODO: build initial score table.
+      // TODO: build initial score table. id:184
       if (cache_tag < 3) {
         // The most recent triangle should has a fixed score to
         // discourage generating nothing but really long strips. If we
@@ -164,7 +164,7 @@ class VertexOptimizer {
       score += valence_boost * kValenceBoostScale;
     }
 
-    // TODO: this assumes that "tri" is in the list!
+    // TODO: this assumes that "tri" is in the list! id:211
     void RemoveFace(int tri) {
       FaceList::iterator face = faces.begin();
       while (*face != tri) ++face;
@@ -207,7 +207,7 @@ class VertexOptimizer {
         }
       }
     }
-    // TODO: keep a range of active triangles to make the slow scan a
+    // TODO: keep a range of active triangles to make the slow scan a id:230
     // little faster. Does this ever happen?
     if (best_triangle == -1) {
       // If no triangles can be found through the cache (e.g. for the
@@ -230,7 +230,7 @@ class VertexOptimizer {
     return best_triangle;
   }
 
-  // TODO: faster to update an entire triangle.
+  // TODO: faster to update an entire triangle. id:240
   // This also updates the vertex scores!
   void InsertIndexToCache(int index) {
     // Find how recently the vertex was used.

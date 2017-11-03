@@ -851,7 +851,7 @@ THREE.MMDPhysics.RigidBody.prototype = {
 		var helper = this.helper;
 		var form = this.getBoneTransform();
 
-		// TODO: check the most appropriate way to set
+		// TODO: check the most appropriate way to set id:3
 		//this.body.setWorldTransform( form );
 		this.body.setCenterOfMassTransform( form );
 		this.body.getMotionState().setWorldTransform( form );
@@ -869,7 +869,7 @@ THREE.MMDPhysics.RigidBody.prototype = {
 		this.body.getMotionState().getWorldTransform( tr );
 		helper.copyOrigin( tr, form );
 
-		// TODO: check the most appropriate way to set
+		// TODO: check the most appropriate way to set id:7
 		//this.body.setWorldTransform( tr );
 		this.body.setCenterOfMassTransform( tr );
 		this.body.getMotionState().setWorldTransform( tr );

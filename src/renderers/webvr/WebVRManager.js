@@ -170,7 +170,7 @@ function WebVRManager( renderer ) {
 		cameraL.projectionMatrix.fromArray( frameData.leftProjectionMatrix );
 		cameraR.projectionMatrix.fromArray( frameData.rightProjectionMatrix );
 
-		// HACK @mrdoob
+		// HACK @mrdoob id:91
 		// https://github.com/w3c/webvr/issues/203
 
 		cameraVR.projectionMatrix.copy( cameraL.projectionMatrix );

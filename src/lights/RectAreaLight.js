@@ -16,15 +16,15 @@ function RectAreaLight( color, intensity, width, height ) {
 	this.width = ( width !== undefined ) ? width : 10;
 	this.height = ( height !== undefined ) ? height : 10;
 
-	// TODO (abelnation): distance/decay
+	// TODO (abelnation): distance/decay id:82
 
-	// TODO (abelnation): update method for RectAreaLight to update transform to lookat target
+	// TODO (abelnation): update method for RectAreaLight to update transform to lookat target id:97
 
-	// TODO (abelnation): shadows
+	// TODO (abelnation): shadows id:87
 
 }
 
-// TODO (abelnation): RectAreaLight update when light shape is changed
+// TODO (abelnation): RectAreaLight update when light shape is changed id:163
 RectAreaLight.prototype = Object.assign( Object.create( Light.prototype ), {
 
 	constructor: RectAreaLight,

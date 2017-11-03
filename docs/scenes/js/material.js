@@ -472,7 +472,7 @@ function guiMeshStandardMaterial ( gui, mesh, material, geometry ) {
 	folder.add( data, 'lightMap', textureMapKeys ).onChange( updateTexture( material, 'lightMap', textureMaps ) );
 	folder.add( data, 'alphaMap', textureMapKeys ).onChange( updateTexture( material, 'alphaMap', textureMaps ) );
 
-	// TODO roughnessMap and metalnessMap
+	// TODO roughnessMap and metalnessMap id:0
 
 }
 

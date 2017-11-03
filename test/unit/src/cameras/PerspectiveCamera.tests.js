@@ -138,7 +138,7 @@ export default QUnit.module( 'Cameras', () => {
 		} );
 
 		// OTHERS
-		// TODO: no no no clone is a camera methods that relied to copy method
+		// TODO: no no no clone is a camera methods that relied to copy method id:108
 		QUnit.test( "clone", ( assert ) => {
 
 			var near = 1,

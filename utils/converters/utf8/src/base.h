@@ -23,7 +23,7 @@
 #include <string>
 #include <vector>
 
-// TODO: consider using C99 spellings.
+// TODO: consider using C99 spellings. id:202
 typedef unsigned char uint8;
 typedef unsigned short uint16;
 typedef short int16;
@@ -45,7 +45,7 @@ typedef std::vector<int> IndexList;
 typedef std::vector<uint16> QuantizedAttribList;
 typedef std::vector<uint16> OptimizedIndexList;
 
-// TODO: these data structures ought to go elsewhere.
+// TODO: these data structures ought to go elsewhere. id:209
 struct DrawMesh {
   // Interleaved vertex format:
   //  3-D Position
@@ -163,7 +163,7 @@ uint16 Quantize(float f, float in_min, float in_scale, uint16 out_max) {
   return static_cast<uint16>(out_max * ((f-in_min) / in_scale));
 }
 
-// TODO: Visual Studio calls this someting different.
+// TODO: Visual Studio calls this someting different. id:218
 #ifdef putc_unlocked
 # define PutChar putc_unlocked
 #else

@@ -60,16 +60,16 @@ export default QUnit.module( 'Cameras', () => {
 
 			var clonedCam = cam.clone();
 
-			// TODO: Uuuummmhhh DO NOT relie equality on object methods !
-			// TODO: What's append if matrix.equal is wrongly implemented ???
-			// TODO: this MUST be check by assert
+			// TODO: Uuuummmhhh DO NOT relie equality on object methods ! id:92
+			// TODO: What's append if matrix.equal is wrongly implemented ??? id:168
+			// TODO: this MUST be check by assert id:148
 			assert.ok( cam.matrixWorldInverse.equals( clonedCam.matrixWorldInverse ), "matrixWorldInverse is equal" );
 			assert.ok( cam.projectionMatrix.equals( clonedCam.projectionMatrix ), "projectionMatrix is equal" );
 
 		} );
 
 		// OTHERS
-		// TODO: this should not be here !!! This is Object3D stuff !!!
+		// TODO: this should not be here !!! This is Object3D stuff !!! id:130
 		QUnit.test( "lookAt", ( assert ) => {
 
 			var cam = new Camera();

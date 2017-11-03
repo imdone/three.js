@@ -4703,7 +4703,7 @@
 					material = new THREE[ materialClass.getValue() ]();
 
 					editor.execute( new SetMaterialCommand( currentObject, material, currentMaterialSlot ), 'New Material: ' + materialClass.getValue() );
-					// TODO Copy other references in the scene graph
+					// TODO Copy other references in the scene graph id:110
 					// keeping name and UUID then.
 					// Also there should be means to create a unique
 					// copy for the current object explicitly and to
@@ -9421,8 +9421,8 @@
 	 * @author TristanVALCKE / https://github.com/Itee
 	 */
 
-	// TODO (Itee) Editor is not es6 module so care to include order !!!
-	// TODO: all views could not be testable, waiting modular code before implement units tests on them
+	// TODO (Itee) Editor is not es6 module so care to include order !!! id:191
+	// TODO: all views could not be testable, waiting modular code before implement units tests on them id:151
 
 	//editor
 	//editor/commands
